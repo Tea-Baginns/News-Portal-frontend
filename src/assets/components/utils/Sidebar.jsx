@@ -1,14 +1,17 @@
 import React from "react";
 import flag from "../../images/sidebar/nepal_flag.svg";
 import earth from "../../images/sidebar/earth.svg";
+import SportsNews from "./SportsNews";
 const Sidebar = ({ children }) => {
   return (
-    <div className="flex    ">
-      <div className="flex-col px-8 py-12  flex-[0.2]">
+    <div className="flex  justify-between    ">
+      <div className="flex-col fixed left-0 px-8 py-6 ">
         {/* today section */}
-        <section>
-          <h1 className="text-md font-semibold">Today</h1>
-          <div className=" mt-5 bg-white w-52 flex flex-col">
+        <section className="mb-2">
+          <h1 className="text-lg font-semibold dark:text-white transition delay-100 ease-in-out">
+            Today
+          </h1>
+          <div className=" mt-2 bg-white w-52 rounded-md flex flex-col">
             <div className="flex items-center px-5 mb-3 mt-3 justify-center space-x-3">
               <img src={flag} className="" />
               <h1 className="text-sm">Mangsir 21, 2079</h1>
@@ -20,9 +23,11 @@ const Sidebar = ({ children }) => {
           </div>
         </section>
         {/* filter section */}
-        <section className="mt-4">
-          <h1 className="text-md font-semibold">Filter</h1>
-          <div className=" mt-5 bg-white w-52 py-4 text-sm flex flex-col">
+        <section className="mt-3">
+          <h1 className="text-lg font-semibold dark:text-white transition delay-100 ease-in-out">
+            Filter
+          </h1>
+          <div className=" py-2 bg-white w-52 rounded-md text-sm mt-2 flex flex-col">
             <h1 className="px-5 py-2 text-gray">Followed</h1>
             <h1 className="px-5 py-2 text-gray">Trending</h1>
             <h1 className="px-5 py-2 text-gray">Politics</h1>
@@ -38,7 +43,10 @@ const Sidebar = ({ children }) => {
           </div>
         </section>
       </div>
-      <div className="flex">{children}</div>
+      <div className="flex flex-[0.8] w-full ">{children}</div>
+      <div className="flex flex-[0.2] w-full  ">
+        <SportsNews />
+      </div>
     </div>
   );
 };
