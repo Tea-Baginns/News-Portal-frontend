@@ -7,6 +7,7 @@ import { AiOutlineShareAlt } from "react-icons/ai";
 import { useSpeechSynthesis } from "react-speech-kit";
 import { text } from "../utils/data";
 import { GiPauseButton } from "react-icons/gi";
+import ImageCard from "../utils/ImageCard";
 const NewsClicked = () => {
   const { speak, cancel, voices } = useSpeechSynthesis();
   const [listening, setListening] = useState(false);
@@ -30,9 +31,9 @@ const NewsClicked = () => {
   return (
     <Sidebar>
       <div className="px-8 py-14  w-3/4 mx-auto mr-0 ">
-        <div className="pb-5 rounded-md bg-white">
-          <img className="py-2 w-full" src={NewsCard} alt="news" />
-          <div className="flex items-center space-x-2">
+        <div className="pb-5 rounded-md bg-white dark-mode">
+          <ImageCard to="#" />
+          <div className="flex items-center  space-x-2">
             {!listening ? (
               <div className="ml-4 flex   items-center">
                 <RxSpeakerLoud

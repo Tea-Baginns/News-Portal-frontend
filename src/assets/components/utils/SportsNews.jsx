@@ -1,5 +1,5 @@
 import React from "react";
-import SideCard from "../../images/sidebar/SportsCard.png";
+import SideCard from "../../images/sidebar/SportsCard.svg";
 import Forex from "../../images/sidebar/forex.svg";
 import FakeThumb from "./FakeThumb";
 const SportsNews = () => {
@@ -11,8 +11,16 @@ const SportsNews = () => {
         <h1 className="text-sm text-gray font-semibold">See All</h1>
       </div>
       <div className="w-80 space-y-3 py-5">
-        <img src={SideCard} alt="" />
-        <img src={SideCard} alt="" />
+        <img
+          className="bg-white dark-mode px-3  py-5 rounded-md"
+          src={SideCard}
+          alt=""
+        />
+        <img
+          className="bg-white dark-mode px-3  py-5 rounded-md"
+          src={SideCard}
+          alt=""
+        />
       </div>
       {/* Forex */}
       <div className="flex  justify-between items-center mb-3 ">
@@ -20,7 +28,7 @@ const SportsNews = () => {
 
         <h1 className="text-sm text-gray font-semibold">See All</h1>
       </div>
-      <div className="bg-white px-2">
+      <div className="bg-white dark-mode  w-full py-5 rounded-md">
         <img src={Forex} alt="" />
       </div>
       <div className=" mt-5">
@@ -40,7 +48,7 @@ const SportsNews = () => {
 
         <h1 className="text-sm text-gray font-semibold">See All</h1>
       </div>
-      <div className="bg-white px-2">
+      <div className="bg-white dark-mode  w-full py-5 rounded-md">
         <img src={Forex} alt="" />
       </div>
       <div className=" mt-5">
@@ -60,7 +68,7 @@ const SportsNews = () => {
 
         <h1 className="text-sm text-gray font-semibold">See All</h1>
       </div>
-      <div className="bg-white px-2">
+      <div className="bg-white dark-mode  w-full py-5 rounded-md">
         <img src={Forex} alt="" />
       </div>
       <div className=" mt-5">
