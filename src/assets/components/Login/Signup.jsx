@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import sign_in from "../../images/SignIn/signin.png";
 import logo_eng from "../../images/utils/ratopati_eng.svg";
 import { AiFillEye } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { ThemeProvider } from "../utils/Navbar";
+import logo_nep from "../../images/utils/ratopati_nep.svg";
+
 const Signup = () => {
+  const lang = useContext(ThemeProvider);
+
   return (
     <div className="flex justify-between items-center overflow-y-hidden bg-white dark-btn">
       <div className="flex flex-col mx-auto justify-center  items-center w-1/3">
-        <img src={logo_eng} className="w-36 " alt="logo" />
+        <img
+          src={lang !== "English" ? logo_eng : logo_nep}
+          className="w-36 "
+          alt="logo"
+        />
         <h1 className="text-2xl font-bold mt-10 .dark-text">
           Create an Account
         </h1>
@@ -67,9 +76,11 @@ const Signup = () => {
               User Agreement, Privacy Policy, and Cookie Policy.{" "}
             </span>
           </h1>
-          <button className="w-full mt-5 bg-red text-white py-3 rounded-md">
-            Submit
-          </button>
+          <Link to="/profile">
+            <h1 className="w-full mt-5 bg-red text-white py-3 text-center rounded-md">
+              Submit
+            </h1>
+          </Link>
           <Link to="/login">
             <h1 className="w-11/12 mt-5 text-center text-gray">
               Already have an account?

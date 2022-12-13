@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import logo_eng from "../../images/utils/ratopati_eng.svg";
+import logo_nep from "../../images/utils/ratopati_nep.svg";
 import ad_logo from "../../images/utils/ads.svg";
 import { AiOutlineSearch } from "react-icons/ai";
 import { CgDarkMode } from "react-icons/cg";
@@ -11,7 +12,7 @@ import { createContext } from "react";
 export const ThemeProvider = createContext();
 const Navbar = ({ children }) => {
   const [theme, setTheme] = useState("light");
-  const [lang, setLang] = useState("nepali");
+  const [lang, setLang] = useState("Nepali");
   useEffect(() => {
     if (theme === "dark" || localStorage.getItem("theme") === "light") {
       document.body.classList.add("dark");
@@ -25,21 +26,27 @@ const Navbar = ({ children }) => {
     localStorage.setItem("theme", theme);
   };
   const handleClick = () => {
-    setLang(lang === "nepali" ? "eng" : "nepali");
+    setLang(lang === "Nepali" ? "English" : "Nepali");
   };
   return (
     <>
-      <div className="sticky  top-0">
+      <div className="sticky z-10 top-0">
         <div className="px-5 py-5 flex justify-around items-center bg-white dark-mode drop-shadow-md ">
           <Link to="/">
-            <img className="w-32" src={logo_eng} alt="" />
+            <img
+              className="w-32"
+              src={lang !== "English" ? logo_eng : logo_nep}
+              alt=""
+            />
           </Link>
           <div className="flex justify-center items-center space-x-5 ">
             <div className="  flex relative justify-center items-center">
               <input
                 type="text"
                 className=" rounded-md px-5 w-80 py-2  bg-lgray dark-btn "
-                placeholder="Search by Title"
+                placeholder={
+                  lang !== "English" ? "Search by Title" : "शीर्षक द्वारा खोज"
+                }
               />
               <AiOutlineSearch
                 size={20}
@@ -58,7 +65,7 @@ const Navbar = ({ children }) => {
                 to="/compact"
                 className="px-6 py-2 rounded-md bg-lgray  dark-btn"
               >
-                Compact View
+                {lang !== "English" ? "Compact View" : "कम्प्याक्ट भिउ"}
               </Link>
             </div>
           </div>
@@ -77,7 +84,7 @@ const Navbar = ({ children }) => {
               className="flex rounded-md justify-center items-center px-5 py-2 space-x-2 text-black bg-lgray"
             >
               <HiOutlineUserCircle size={25} color="black" />
-              <h1 className="">Login</h1>
+              <h1>{lang !== "English" ? "Login" : "लग-इन"}</h1>
             </Link>
           </div>
         </div>

@@ -20,8 +20,8 @@ function App() {
             <Route path="/profile" element={<Profile />} />
             <Route path="/compact" element={<CompactView />} />
           </Routes>
+          <Footer />
         </Navbar>
-        <Footer />
       </Router>
     </div>
   );

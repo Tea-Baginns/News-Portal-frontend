@@ -1,11 +1,10 @@
 import React, { useContext, useState } from "react";
-import NewsCard from "../../images/Home/NewsCard.svg";
 import Trending from "../../images/Home/Trending.png";
 import Sidebar from "../utils/Sidebar";
 import { RxSpeakerLoud } from "react-icons/rx";
 import { AiOutlineShareAlt } from "react-icons/ai";
 import { useSpeechSynthesis } from "react-speech-kit";
-import { text } from "../utils/data";
+import { data } from "../utils/data";
 import { GiPauseButton } from "react-icons/gi";
 import ImageCard from "../utils/ImageCard";
 import { ThemeProvider } from "../utils/Navbar";
@@ -13,16 +12,13 @@ const NewsClicked = () => {
   const lang = useContext(ThemeProvider);
   const { speak, cancel, voices } = useSpeechSynthesis();
   const [listening, setListening] = useState(false);
-  //   const msg = new SpeechSynthesisUtterance();
-  //   msg.text = "Hello World";
   const handleClick = () => {
-    console.log(voices);
     if (!listening) {
       setListening(true);
-      if (lang === "nepali") {
-        speak({ text: text["nepali"], voice: voices[10] });
+      if (lang === "English") {
+        speak({ text: data["nepali"].text, voice: voices[10] });
       } else {
-        speak({ text: text["eng"], voice: voices[2] });
+        speak({ text: data["eng"].text, voice: voices[2] });
       }
     }
   };
@@ -35,7 +31,7 @@ const NewsClicked = () => {
 
   return (
     <Sidebar>
-      <div className="px-8 py-14  w-3/4 mx-auto mr-0 ">
+      <div className="px-8 py-10 mt-8   mx-auto ">
         <div className="pb-5 rounded-md bg-white dark-mode">
           <ImageCard to="#" />
           <div className="flex items-center  space-x-2">
@@ -78,7 +74,12 @@ const NewsClicked = () => {
           </div>
         </div>
         <div className="text-sm mt-5 px-3 dark-text">
-          <p>{lang === "nepali" ? text["nepali"] : text["eng"]}</p>
+          <h1 className="text-3xl font-semibold mb-3 ">
+            {lang !== "Nepali" ? data["nepali"].title : data["eng"].title}
+          </h1>
+          <h1 className="text-lg ">
+            {lang !== "Nepali" ? data["nepali"].text : data["eng"].text}
+          </h1>
         </div>
         {/* comments */}
         <div className="mt-5">
@@ -94,7 +95,10 @@ const NewsClicked = () => {
           </div>
         </div>
         <div className="flex  justify-between items-center px-2">
-          <h1 className="text-lg mt-3 font-semibold dark-text">Trending</h1>
+          <h1 className="text-lg mt-3 font-semibold dark-text">
+            {" "}
+            {lang !== "English" ? "Trending" : "ट्रेन्डिङ"}
+          </h1>
 
           <h1 className="text-sm text-gray font-semibold">See All</h1>
         </div>
