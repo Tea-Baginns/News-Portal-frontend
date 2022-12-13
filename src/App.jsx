@@ -11,15 +11,16 @@ function App() {
   return (
     <div className="bg-lgray dark:bg-brown transition delay-100 ease-in-out">
       <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/news" element={<NewsClicked />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/compact" element={<CompactView />} />
-        </Routes>
+        <Navbar>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/news" element={<NewsClicked />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/compact" element={<CompactView />} />
+          </Routes>
+        </Navbar>
         <Footer />
       </Router>
     </div>

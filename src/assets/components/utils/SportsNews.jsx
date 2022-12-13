@@ -31,6 +31,18 @@ const SportsNews = () => {
       <div className="bg-white dark-mode  w-full py-5 rounded-md">
         <img src={Forex} alt="" />
       </div>
+      <div className="flex justify-center items-center my-5 ">
+        <a href="https://globalimebank.com/" className="w-full" target="_blank">
+          <img
+            alt=""
+            className="w-full"
+            src="https://ratopatis.prixacdn.net/media/Global_Ime_update_21.gif"
+          />
+        </a>
+      </div>
+
+      {/* Politics */}
+
       <div className=" mt-5">
         <div className="flex  justify-between items-center ">
           <h1 className="text-lg font-semibold dark-text">Politics</h1>

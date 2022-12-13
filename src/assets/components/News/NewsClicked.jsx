@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import NewsCard from "../../images/Home/NewsCard.svg";
 import Trending from "../../images/Home/Trending.png";
 import Sidebar from "../utils/Sidebar";
@@ -8,7 +8,9 @@ import { useSpeechSynthesis } from "react-speech-kit";
 import { text } from "../utils/data";
 import { GiPauseButton } from "react-icons/gi";
 import ImageCard from "../utils/ImageCard";
+import { ThemeProvider } from "../utils/Navbar";
 const NewsClicked = () => {
+  const lang = useContext(ThemeProvider);
   const { speak, cancel, voices } = useSpeechSynthesis();
   const [listening, setListening] = useState(false);
   //   const msg = new SpeechSynthesisUtterance();
@@ -17,8 +19,11 @@ const NewsClicked = () => {
     console.log(voices);
     if (!listening) {
       setListening(true);
-
-      speak({ text, voice: voices[2] });
+      if (lang === "nepali") {
+        speak({ text: text["nepali"], voice: voices[10] });
+      } else {
+        speak({ text: text["eng"], voice: voices[2] });
+      }
     }
   };
   const pause = () => {
@@ -73,7 +78,7 @@ const NewsClicked = () => {
           </div>
         </div>
         <div className="text-sm mt-5 px-3 dark-text">
-          <p>{text}</p>
+          <p>{lang === "nepali" ? text["nepali"] : text["eng"]}</p>
         </div>
         {/* comments */}
         <div className="mt-5">
