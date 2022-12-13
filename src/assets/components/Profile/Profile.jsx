@@ -1,6 +1,6 @@
 import React from "react";
 import profile_img from "../../images/Profile/profile.png";
-import saved_posts from "../../images/Profile/posts.png";
+import saved_posts from "../../images/Profile/posts.svg";
 import { AiFillEdit } from "react-icons/ai";
 const Profile = () => {
   return (
@@ -101,7 +101,7 @@ const Profile = () => {
 
           <h1 className="text-sm text-gray font-semibold">See All</h1>
         </div>
-        <div className="px-8 my-5 flex flex-col py-5 bg-white rounded-md text-gray">
+        <div className="px-4 my-5 w-full flex flex-col py-5 space-y-6 bg-white dark-mode rounded-md text-gray">
           <img src={saved_posts} alt="" />
           <img src={saved_posts} alt="" />
         </div>

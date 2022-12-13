@@ -42,9 +42,12 @@ const Navbar = () => {
             <button className="px-6 py-2 rounded-md bg-lgray dark-btn">
               Nepali
             </button>
-            <button className="px-6 py-2 rounded-md bg-lgray  dark-btn">
+            <Link
+              to="/compact"
+              className="px-6 py-2 rounded-md bg-lgray  dark-btn"
+            >
               Compact View
-            </button>
+            </Link>
           </div>
         </div>
 

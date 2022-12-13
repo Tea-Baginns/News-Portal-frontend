@@ -6,6 +6,7 @@ import Footer from "./assets/components/utils/Footer";
 import Signup from "./assets/components/Login/Signup";
 import Login from "./assets/components/Login/Login";
 import Profile from "./assets/components/Profile/Profile";
+import CompactView from "./assets/components/CompactView/CompactViews";
 function App() {
   return (
     <div className="bg-lgray dark:bg-brown transition delay-100 ease-in-out">
@@ -17,6 +18,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/compact" element={<CompactView />} />
         </Routes>
         <Footer />
       </Router>

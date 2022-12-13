@@ -13,7 +13,7 @@ const HomePage = () => {
 
           <h1 className="text-sm text-gray font-semibold">See All</h1>
         </div>
-        <ImageCard to="/news" />
+        <ImageCard link="/news" />
         {/* Trending */}
         <div className="flex  justify-between items-center px-2">
           <h1 className="text-lg mt-3 dark-text font-semibold">Trending</h1>
@@ -30,14 +30,14 @@ const HomePage = () => {
         </h1>
         <div className="flex flex-col justify-center  ">
           <>
-            <ImageCard to="/news" />
-            <ImageCard to="/news" />
-            <ImageCard to="/news" />
-            <ImageCard to="/news" />
+            <ImageCard link="/news" />
+            <ImageCard link="/news" />
+            <ImageCard link="/news" />
+            <ImageCard link="/news" />
           </>
         </div>
         <div className="flex  justify-between items-center">
-          <h1 className="text-lg font-semibold dark-text">Trending</h1>
+          <h1 className="text-lg font-semibold dark-text">Ratopati Video</h1>
           <h1 className="text-sm text-gray font-semibold">See All</h1>
         </div>
         <div className="flex justify-center items-center space-x-3">
