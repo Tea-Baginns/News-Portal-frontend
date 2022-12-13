@@ -1,14 +1,12 @@
 import React from "react";
 import SideCard from "../../images/sidebar/SportsCard.png";
 import Forex from "../../images/sidebar/forex.svg";
-import Ran1 from "../../images/sidebar/Rectangle 15.png";
+import FakeThumb from "./FakeThumb";
 const SportsNews = () => {
   return (
     <div className="px-8 py-6 w-full  ">
       <div className="flex  justify-between items-center ">
-        <h1 className="text-lg font-semibold dark:text-white transition delay-100 ease-in-out">
-          Sports News
-        </h1>
+        <h1 className="text-lg font-semibold dark-text">Sports News</h1>
 
         <h1 className="text-sm text-gray font-semibold">See All</h1>
       </div>
@@ -18,9 +16,7 @@ const SportsNews = () => {
       </div>
       {/* Forex */}
       <div className="flex  justify-between items-center mb-3 ">
-        <h1 className="text-lg font-semibold dark:text-white transition delay-100 ease-in-out">
-          Forex
-        </h1>
+        <h1 className="text-lg font-semibold dark-text">Forex</h1>
 
         <h1 className="text-sm text-gray font-semibold">See All</h1>
       </div>
@@ -29,34 +25,18 @@ const SportsNews = () => {
       </div>
       <div className=" mt-5">
         <div className="flex  justify-between items-center ">
-          <h1 className="text-lg font-semibold dark:text-white transition delay-100 ease-in-out">
-            Politics
-          </h1>
+          <h1 className="text-lg font-semibold dark-text">Politics</h1>
 
           <h1 className="text-sm text-gray font-semibold">See All</h1>
         </div>
-        <div className="flex mt-4 items-center">
-          <img src={Ran1} className="w-20 mr-5" alt="" />
-          <h1>Lorem Ipsum</h1>
-        </div>
-        <div className="flex mt-4 items-center">
-          <img src={Ran1} className="w-20 mr-5" alt="" />
-          <h1>Lorem Ipsum</h1>
-        </div>
-        <div className="flex mt-4 items-center">
-          <img src={Ran1} className="w-20 mr-5" alt="" />
-          <h1>Lorem Ipsum</h1>
-        </div>
-        <div className="flex mt-4 items-center">
-          <img src={Ran1} className="w-20 mr-5" alt="" />
-          <h1>Lorem Ipsum</h1>
-        </div>
+        <FakeThumb />
+        <FakeThumb />
+        <FakeThumb />
+        <FakeThumb />
       </div>
       {/* International */}
       <div className="flex  justify-between items-center my-3 ">
-        <h1 className="text-lg font-semibold dark:text-white transition delay-100 ease-in-out ">
-          International
-        </h1>
+        <h1 className="text-lg font-semibold dark-text ">International</h1>
 
         <h1 className="text-sm text-gray font-semibold">See All</h1>
       </div>
@@ -65,34 +45,18 @@ const SportsNews = () => {
       </div>
       <div className=" mt-5">
         <div className="flex  justify-between items-center ">
-          <h1 className="text-lg font-semibold dark:text-white transition delay-100 ease-in-out">
-            Politics
-          </h1>
+          <h1 className="text-lg font-semibold dark-text">Politics</h1>
 
           <h1 className="text-sm text-gray font-semibold">See All</h1>
         </div>
-        <div className="flex mt-4 items-center">
-          <img src={Ran1} className="w-20 mr-5" alt="" />
-          <h1>Lorem Ipsum</h1>
-        </div>
-        <div className="flex mt-4 items-center">
-          <img src={Ran1} className="w-20 mr-5" alt="" />
-          <h1>Lorem Ipsum</h1>
-        </div>
-        <div className="flex mt-4 items-center">
-          <img src={Ran1} className="w-20 mr-5" alt="" />
-          <h1>Lorem Ipsum</h1>
-        </div>
-        <div className="flex mt-4 items-center">
-          <img src={Ran1} className="w-20 mr-5" alt="" />
-          <h1>Lorem Ipsum</h1>
-        </div>
+        <FakeThumb />
+        <FakeThumb />
+        <FakeThumb />
+        <FakeThumb />
       </div>
       {/* Technology */}
       <div className="flex  justify-between items-center my-3 ">
-        <h1 className="text-lg font-semibold dark:text-white transition delay-100 ease-in-out ">
-          Technology
-        </h1>
+        <h1 className="text-lg font-semibold dark-text ">Technology</h1>
 
         <h1 className="text-sm text-gray font-semibold">See All</h1>
       </div>
@@ -101,28 +65,14 @@ const SportsNews = () => {
       </div>
       <div className=" mt-5">
         <div className="flex  justify-between items-center ">
-          <h1 className="text-lg font-semibold dark:text-white transition delay-100 ease-in-out">
-            Politics
-          </h1>
+          <h1 className="text-lg font-semibold dark-text">Politics</h1>
 
           <h1 className="text-sm text-gray font-semibold">See All</h1>
         </div>
-        <div className="flex mt-4 items-center">
-          <img src={Ran1} className="w-20 mr-5" alt="" />
-          <h1>Lorem Ipsum</h1>
-        </div>
-        <div className="flex mt-4 items-center">
-          <img src={Ran1} className="w-20 mr-5" alt="" />
-          <h1>Lorem Ipsum</h1>
-        </div>
-        <div className="flex mt-4 items-center">
-          <img src={Ran1} className="w-20 mr-5" alt="" />
-          <h1>Lorem Ipsum</h1>
-        </div>
-        <div className="flex mt-4 items-center">
-          <img src={Ran1} className="w-20 mr-5" alt="" />
-          <h1>Lorem Ipsum</h1>
-        </div>
+        <FakeThumb />
+        <FakeThumb />
+        <FakeThumb />
+        <FakeThumb />
       </div>
     </div>
   );

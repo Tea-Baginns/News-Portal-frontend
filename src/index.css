@@ -7,3 +7,15 @@
 font-family: 'Raleway', sans-serif;
 font-family: 'Rubik', sans-serif;
 }
+@layer components{
+
+.dark-mode{
+  @apply dark:bg-black  dark:text-white transition delay-100 ease-in-out
+}
+.dark-text{
+  @apply dark:text-white transition delay-100 ease-in-out
+}
+.dark-btn{
+  @apply dark:bg-brown dark:text-white  transition delay-100 ease-in-out
+}
+}

@@ -21,7 +21,7 @@ const Navbar = () => {
   };
   return (
     <div className="sticky  top-0">
-      <div className="px-5 py-5 flex justify-around items-center bg-white dark:bg-black transition delay-100 ease-in-out drop-shadow-md ">
+      <div className="px-5 py-5 flex justify-around items-center bg-white dark-mode drop-shadow-md ">
         <Link to="/">
           <img className="w-32" src={logo_eng} alt="" />
         </Link>
@@ -29,7 +29,7 @@ const Navbar = () => {
           <div className="  flex relative justify-center items-center">
             <input
               type="text"
-              className=" rounded-md px-5 w-80 py-2  bg-lgray"
+              className=" rounded-md px-5 w-80 py-2  bg-lgray dark-btn "
               placeholder="Search by Title"
             />
             <AiOutlineSearch
@@ -38,11 +38,11 @@ const Navbar = () => {
               color="gray"
             />
           </div>
-          <div className="space-x-5">
-            <button className="px-6 py-2 rounded-md bg-lgray dark:bg-brown dark:text-white text-gray transition delay-100 ease-in-out">
+          <div className="space-x-5 text-gray">
+            <button className="px-6 py-2 rounded-md bg-lgray dark-btn">
               Nepali
             </button>
-            <button className="px-6 py-2 rounded-md bg-lgray text-gray dark:bg-brown dark:text-white transition delay-100 ease-in-out">
+            <button className="px-6 py-2 rounded-md bg-lgray  dark-btn">
               Compact View
             </button>
           </div>
@@ -53,18 +53,15 @@ const Navbar = () => {
           <CgDarkMode
             size={25}
             onClick={handleDark}
-            className="dark:text-white transition delay-100 ease-in-out cursor-pointer"
+            className="dark-text text-black cursor-pointer"
           />
-          <RiNotification2Fill
-            size={25}
-            className=" dark:text-white transition delay-100 ease-in-out"
-          />
+          <RiNotification2Fill size={25} className=" text-black dark-text" />
           <Link
             to="/login"
-            className="flex justify-center items-center px-5 py-2 space-x-2 bg-lgray"
+            className="flex rounded-md justify-center items-center px-5 py-2 space-x-2 text-black bg-lgray"
           >
-            <HiOutlineUserCircle size={25} color="gray" />
-            <h1>Login</h1>
+            <HiOutlineUserCircle size={25} color="black" />
+            <h1 className="">Login</h1>
           </Link>
         </div>
       </div>

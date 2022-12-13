@@ -8,7 +8,7 @@ const Profile = () => {
       <div className="">
         <div className="flex  place-items-end space-x-5">
           <img src={profile_img} className="w-40" />
-          <div className="flex flex-col  dark:text-white  transition delay-100 ease-in-out ">
+          <div className="flex flex-col  dark-text ">
             <h1 className="text-xl font-semibold ">Debesh Shankhi</h1>
             <h1 className="text-md ">Reader</h1>
             <h1 className="text-sm text-gray">Joined December 11,2022</h1>
@@ -39,22 +39,22 @@ const Profile = () => {
             <h2 className=" text-md w-1/2">Home Address</h2>
           </div>
         </div>
-        <div className="px-5 my-5 py-3  bg-white rounded-md ">
+        <div className="px-5 my-5 py-3  bg-white rounded-md dark-mode ">
           <div className="flex justify-between w-5/6 mx-auto p-3">
             <h1 className="font-semibold text-lg">Interested Topics</h1>
             <h2 className="text-red text-md">Add +</h2>
           </div>
           <div className="flex justify-center space-x-4 py-2  items-center">
-            <button className="px-6 py-2 rounded-md bg-lgray dark:bg-brown dark:text-white text-gray transition delay-100 ease-in-out">
+            <button className="px-6 py-2 rounded-md bg-lgray  text-gray dark-btn">
               Finance
             </button>
-            <button className="px-6 py-2 rounded-md bg-lgray dark:bg-brown dark:text-white text-gray transition delay-100 ease-in-out">
+            <button className="px-6 py-2 rounded-md bg-lgray text-gray dark-btn">
               Technology
             </button>
-            <button className="px-6 py-2 rounded-md bg-lgray dark:bg-brown dark:text-white text-gray transition delay-100 ease-in-out">
+            <button className="px-6 py-2 rounded-md bg-lgray text-gray dark-btn">
               Sports
             </button>
-            <button className="px-6 py-2 rounded-md bg-lgray dark:bg-brown dark:text-white text-gray transition delay-100 ease-in-out">
+            <button className="px-6 py-2 rounded-md bg-lgray text-gray dark-btn">
               Esports
             </button>
           </div>
@@ -62,7 +62,7 @@ const Profile = () => {
       </div>
       <div className="flex flex-col w-1/2">
         <div className="flex  justify-between items-center px-2">
-          <h1 className="text-lg mt-3 font-semibold  dark:text-white transition delay-100 ease-in-out">
+          <h1 className="text-lg mt-3 font-semibold  dark-text">
             Activity Log
           </h1>
 
@@ -97,9 +97,7 @@ const Profile = () => {
           </div>
         </div>
         <div className="flex  justify-between items-center px-2">
-          <h1 className="text-lg mt-3 font-semibold dark:text-white transition delay-100 ease-in-out">
-            Saved Posts
-          </h1>
+          <h1 className="text-lg mt-3 font-semibold dark-text">Saved Posts</h1>
 
           <h1 className="text-sm text-gray font-semibold">See All</h1>
         </div>

@@ -3,8 +3,8 @@ import logo_eng from "../../images/utils/ratopati_eng.svg";
 
 const Footer = () => {
   return (
-    <div className="py-12 space-x-36 flex justify-center bg-white dark:bg-black dark:text-white transition delay-100 ease-in-out">
-      <div>
+    <div className="py-12 space-x-36 flex   justify-center bg-white dark:bg-black dark-text">
+      <div className="">
         <h1 className="mb-3">
           Editor-in-Chief: Jiwendra Simkhada <br />
           Chairman: Bijaya Sharma

@@ -5,28 +5,28 @@ import { AiFillEye } from "react-icons/ai";
 import { Link } from "react-router-dom";
 const Signup = () => {
   return (
-    <div className="flex justify-between items-center overflow-y-hidden bg-white dark:bg-black transition delay-100 ease-in-out">
+    <div className="flex justify-between items-center overflow-y-hidden bg-white dark-btn">
       <div className="flex flex-col mx-auto justify-center  items-center w-1/3">
         <img src={logo_eng} className="w-36 " alt="logo" />
-        <h1 className="text-2xl font-bold mt-10 dark:text-white transition delay-100 ease-in-out">
+        <h1 className="text-2xl font-bold mt-10 .dark-text">
           Create an Account
         </h1>
         <form className="mt-5">
           <input
             type="text"
             placeholder="Full Name"
-            className="border-b-2 py-3 px-3 outline-none border-b-gray w-full dark:bg-black transition delay-100 ease-in-out"
+            className="border-b-2 py-3 px-3 outline-none border-b-gray w-full dark-btn"
           />
           <input
             type="text"
             placeholder="Email"
-            className="border-b-2 py-3 px-3 outline-none border-b-gray w-full dark:bg-black transition delay-100 ease-in-out"
+            className="border-b-2 py-3 px-3 outline-none border-b-gray w-full dark-btn"
           />
           <div className="flex border-b-2 justify-between items-center border-b-gray">
             <input
               type="password"
               placeholder="Password"
-              className=" py-3 px-3 outline-none  w-full dark:bg-black transition delay-100 ease-in-out"
+              className=" py-3 px-3 outline-none  w-full dark-btn"
             />
             <AiFillEye size="30" color={"gray"} />
           </div>
@@ -34,7 +34,7 @@ const Signup = () => {
             <input
               type="password"
               placeholder="Confirm Password"
-              className=" py-3 px-3 outline-none  w-full dark:bg-black transition delay-100 ease-in-out"
+              className=" py-3 px-3 outline-none  w-full dark-btn"
             />
             <AiFillEye size="30" color={"gray"} />
           </div>
@@ -42,10 +42,10 @@ const Signup = () => {
             <input
               type="password"
               placeholder="I am a"
-              className=" py-3 px-3 outline-none  w-full dark:bg-black transition delay-100 ease-in-out"
+              className=" py-3 px-3 outline-none  w-full dark-btn"
             />
-            <div className="flex justify-center items-center  accent-gray dark:text-gray transition delay-100 ease-in-out space-x-2">
-              <div className="flex justify-center items-center space-x-3">
+            <div className="flex justify-center items-center  accent-gray dark-text space-x-2">
+              <div className="flex justify-center items-center  space-x-3">
                 <input
                   type="radio"
                   name="name"
@@ -53,11 +53,11 @@ const Signup = () => {
                   checked
                   className=""
                 />
-                <label>Reader</label>
+                <h1 className="dark-text">Reader</h1>
               </div>
               <div className="flex justify-center items-center space-x-3">
                 <input type="radio" name="name" value="Journalist" />
-                <label>Journalist</label>
+                <h1 className="dark-text">Reader</h1>
               </div>
             </div>
           </div>
