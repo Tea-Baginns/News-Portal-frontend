@@ -6,9 +6,9 @@ import { AiOutlineShareAlt } from "react-icons/ai";
 import { useSpeechSynthesis } from "react-speech-kit";
 import { data } from "../utils/data";
 import { GiPauseButton } from "react-icons/gi";
-import ImageCard from "../utils/ImageCard";
 import { ThemeProvider } from "../utils/Navbar";
 import NewsCard from "../NewsCard";
+
 const NewsClicked = () => {
   const lang = useContext(ThemeProvider);
   const { speak, cancel, voices } = useSpeechSynthesis();
@@ -35,7 +35,13 @@ const NewsClicked = () => {
       <div className="px-8 py-10 mt-8   mx-auto ">
         <div className="pb-5 rounded-md bg-white dark-mode">
           {/* <ImageCard to="#" /> */}
-          <NewsCard />
+          <NewsCard
+            title={
+              lang !== "English"
+                ? "Revampthonorganized by Leapfrog boasts 13 amazing teams"
+                : "Leapfrog द्वारा आयोजित Recampton मा 13 अद्भुत टोलीहरू गर्व गर्दछ"
+            }
+          />
           <div className="flex items-center  space-x-2">
             {!listening ? (
               <div className="ml-4 flex   items-center">

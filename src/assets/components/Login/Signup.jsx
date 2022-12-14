@@ -101,7 +101,7 @@ const Signup = () => {
               </div>
               <div className="flex justify-center items-center space-x-3">
                 <input type="radio" name="name" value="Journalist" />
-                <h1 className="dark-text">Reader</h1>
+                <h1 className="dark-text">Journalist</h1>
               </div>
             </div>
           </div>
