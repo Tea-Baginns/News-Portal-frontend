@@ -1,13 +1,48 @@
-import React, { useContext } from "react";
+import axios from "axios";
+import { AiFillEye } from "react-icons/ai";
+import { useMutation } from "react-query";
+import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+
 import sign_in from "../../images/SignIn/signin.png";
 import logo_eng from "../../images/utils/ratopati_eng.svg";
-import { AiFillEye } from "react-icons/ai";
-import { Link } from "react-router-dom";
+
+import getUrl from "../../../utils/getUrl";
 import { ThemeProvider } from "../utils/Navbar";
 import logo_nep from "../../images/utils/ratopati_nep.svg";
 
 const Signup = () => {
   const lang = useContext(ThemeProvider);
+  const navigate = useNavigate();
+  const [name, setName] = useState("");
+  const [role, setRole] = useState(1);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
+  const mutation = useMutation({
+    mutationFn: (e) => {
+      if (password !== confirmPassword) {
+        // TODO: handle this
+        return;
+      }
+
+      e.preventDefault();
+      return axios.post(getUrl("/user/signup"), {
+        email,
+        password,
+        name,
+        role: role === 1 ? "reader" : "writer",
+      });
+    },
+    onSuccess(data) {
+      localStorage.setItem("token", data.data.token);
+      navigate("/");
+    },
+    onError(error) {
+      // TODO: handle this
+    },
+  });
 
   return (
     <div className="flex justify-between items-center overflow-y-hidden bg-white dark-btn">
