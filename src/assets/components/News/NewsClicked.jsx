@@ -8,6 +8,7 @@ import { data } from "../utils/data";
 import { GiPauseButton } from "react-icons/gi";
 import ImageCard from "../utils/ImageCard";
 import { ThemeProvider } from "../utils/Navbar";
+import NewsCard from "../NewsCard";
 const NewsClicked = () => {
   const lang = useContext(ThemeProvider);
   const { speak, cancel, voices } = useSpeechSynthesis();
@@ -33,7 +34,8 @@ const NewsClicked = () => {
     <Sidebar>
       <div className="px-8 py-10 mt-8   mx-auto ">
         <div className="pb-5 rounded-md bg-white dark-mode">
-          <ImageCard to="#" />
+          {/* <ImageCard to="#" /> */}
+          <NewsCard />
           <div className="flex items-center  space-x-2">
             {!listening ? (
               <div className="ml-4 flex   items-center">

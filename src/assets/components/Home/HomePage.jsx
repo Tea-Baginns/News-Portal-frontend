@@ -6,6 +6,8 @@ import ImageCard from "../utils/ImageCard";
 import { ThemeProvider } from "../utils/Navbar";
 import { data } from "../utils/data";
 import Sidebar from "../utils/Sidebar";
+import NewsCard from "../NewsCard";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const lang = useContext(ThemeProvider);
@@ -19,7 +21,11 @@ const HomePage = () => {
 
           <h1 className="text-sm text-gray font-semibold">See All</h1>
         </div>
-        <ImageCard link="/news" />
+        <Link to="/news">
+          <div className="bg-white dark:bg-black text-black dark:text-white">
+            <NewsCard />
+          </div>
+        </Link>
         {/* Trending */}
         <div className="flex  justify-between items-center px-2">
           <h1 className="text-lg mt-3 dark-text font-semibold">
