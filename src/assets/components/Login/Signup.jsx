@@ -55,15 +55,17 @@ const Signup = () => {
         <h1 className="text-2xl font-bold mt-10 .dark-text">
           Create an Account
         </h1>
-        <form className="mt-5">
+        <form className="mt-5" onSubmit={mutation.mutate}>
           <input
             type="text"
             placeholder="Full Name"
             className="border-b-2 py-3 px-3 outline-none border-b-gray w-full dark-btn"
+            onChange={(e) => setName(e.target.value)}
           />
           <input
             type="text"
             placeholder="Email"
+            onChange={(e) => setEmail(e.target.value)}
             className="border-b-2 py-3 px-3 outline-none border-b-gray w-full dark-btn"
           />
           <div className="flex border-b-2 justify-between items-center border-b-gray">
@@ -71,6 +73,7 @@ const Signup = () => {
               type="password"
               placeholder="Password"
               className=" py-3 px-3 outline-none  w-full dark-btn"
+              onChange={(e) => setPassword(e.target.value)}
             />
             <AiFillEye size="30" color={"gray"} />
           </div>
@@ -79,13 +82,13 @@ const Signup = () => {
               type="password"
               placeholder="Confirm Password"
               className=" py-3 px-3 outline-none  w-full dark-btn"
+              onChange={(e) => setConfirmPassword(e.target.value)}
             />
             <AiFillEye size="30" color={"gray"} />
           </div>
           <div className="flex border-b-2 justify-between items-center border-b-gray">
             <input
-              type="password"
-              placeholder="I am a"
+              value="I am a"
               className=" py-3 px-3 outline-none  w-full dark-btn"
             />
             <div className="flex justify-center items-center  accent-gray dark-text space-x-2">
@@ -96,6 +99,7 @@ const Signup = () => {
                   value="Reader"
                   checked
                   className=""
+                  onChange={(e) => setRole(e.target.value)}
                 />
                 <h1 className="dark-text">Reader</h1>
               </div>
@@ -111,11 +115,11 @@ const Signup = () => {
               User Agreement, Privacy Policy, and Cookie Policy.{" "}
             </span>
           </h1>
-          <Link to="/profile">
-            <h1 className="w-full mt-5 bg-red text-white py-3 text-center rounded-md">
-              Submit
-            </h1>
-          </Link>
+          {/* <Link to="/profile"> */}
+          <button className="w-full mt-5 bg-red text-white py-3 text-center rounded-md">
+            Submit
+          </button>
+          {/* </Link> */}
           <Link to="/login">
             <h1 className="w-11/12 mt-5 text-center text-gray">
               Already have an account?

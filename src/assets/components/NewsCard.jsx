@@ -101,9 +101,12 @@ const NewsCard = ({
           <img src={image} className="w-full" alt={title} />
         </Wrapper>
         <div className="absolute top-4 left-4 font-light flex gap-2">
-          {categories.map((c) => {
+          {categories.map((c, state) => {
             return (
-              <span className="bg-black text-lgray px-4 py-2 rounded-lg font">
+              <span
+                key={state}
+                className="bg-black text-lgray px-4 py-2 rounded-lg font"
+              >
                 {c}
               </span>
             );
@@ -136,10 +139,12 @@ const NewsCard = ({
           <div className="flex justify-between items-center">
             <div className="flex items-center text-sm font">
               <img src={Author} alt="" />
-              <span className="px-4">{author}</span>
-              <a className="text-red" href="#">
-                Follow
-              </a>
+              <div className="flex">
+                <span className="px-4">{author}</span>
+                <a className="text-red" href="#">
+                  Follow
+                </a>
+              </div>
             </div>
             <div className="flex gap-4 items-center">
               <div className="flex gap-2 items-center">

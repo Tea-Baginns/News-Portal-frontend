@@ -61,11 +61,11 @@ const Login = () => {
             />
           </div>
 
-          <Link to="/profile">
-            <h1 className="w-full mt-5 bg-red text-white py-3 text-center rounded-md">
-              Login
-            </h1>
-          </Link>
+          {/* <Link to="/profile"> */}
+          <button className="w-full mt-5 bg-red text-white py-3 text-center rounded-md">
+            Login
+          </button>
+          {/* </Link> */}
           <Link to="/signup">
             <h1 className="w-11/12 mt-5 text-center text-gray">
               Don't have an account?

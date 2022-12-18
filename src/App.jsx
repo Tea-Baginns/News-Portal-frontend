@@ -9,7 +9,7 @@ import Profile from "./assets/components/Profile/Profile";
 import CompactView from "./assets/components/CompactView/CompactViews";
 function App() {
   return (
-    <div className="bg-lgray dark:bg-brown transition delay-100 ease-in-out">
+    <div className="bg-lgray w-full dark:bg-brown transition delay-100 ease-in-out">
       <Router>
         <Navbar>
           <Routes>

@@ -1,3 +1,4 @@
-const getUrl = (url) => "http://localhost:5000/api" + url;
+const getUrl = (url) =>
+  "http://revamp-backend.eastus.cloudapp.azure.com:5000/api" + url;
 
 export default getUrl;

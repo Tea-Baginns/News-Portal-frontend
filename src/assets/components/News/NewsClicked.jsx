@@ -38,7 +38,7 @@ const NewsClicked = () => {
           <NewsCard
             title={
               lang !== "English"
-                ? "Revampthonorganized by Leapfrog boasts 13 amazing teams"
+                ? "Revampthon organized by Leapfrog boasts 13 amazing teams"
                 : "Leapfrog द्वारा आयोजित Recampton मा 13 अद्भुत टोलीहरू गर्व गर्दछ"
             }
           />
@@ -111,8 +111,8 @@ const NewsClicked = () => {
           <h1 className="text-sm text-gray font-semibold">See All</h1>
         </div>
         <div className="flex justify-center items-center space-x-3">
-          <img className="py-5 w-96 " src={Trending} alt="news" />
-          <img className="py-5 w-96 " src={Trending} alt="news" />
+          <img className="py-5 w-1/2 " src={Trending} alt="news" />
+          <img className="py-5 w-1/2" src={Trending} alt="news" />
         </div>
       </div>
     </Sidebar>

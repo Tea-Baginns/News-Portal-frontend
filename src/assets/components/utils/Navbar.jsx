@@ -10,7 +10,9 @@ import { Link } from "react-router-dom";
 import { createContext } from "react";
 
 export const ThemeProvider = createContext();
+
 const Navbar = ({ children }) => {
+  const [views, setViews] = useState(false);
   const [theme, setTheme] = useState("light");
   const [lang, setLang] = useState("Nepali");
   useEffect(() => {
@@ -30,8 +32,8 @@ const Navbar = ({ children }) => {
   };
   return (
     <>
-      <div className="sticky z-10 top-0">
-        <div className="px-5 py-5 flex justify-around items-center bg-white dark-mode drop-shadow-md ">
+      <div className="sticky z-10 top-0  ">
+        <div className="px-5 py-5 flex  justify-around items-center bg-white dark-mode drop-shadow-md ">
           <Link to="/">
             <img
               className="w-32"
@@ -61,12 +63,25 @@ const Navbar = ({ children }) => {
               >
                 {lang}
               </button>
-              <Link
-                to="/compact"
-                className="px-6 py-2 rounded-md bg-lgray  dark-btn"
-              >
-                {lang !== "English" ? "Compact View" : "कम्प्याक्ट भिउ"}
-              </Link>
+              {views ? (
+                <Link to="/">
+                  <button
+                    onClick={() => setViews(!views)}
+                    className="px-6 py-2 rounded-md bg-lgray  dark-btn"
+                  >
+                    {lang !== "English" ? "Normal View" : "भिउ"}
+                  </button>
+                </Link>
+              ) : (
+                <Link to="/compact">
+                  <button
+                    onClick={() => setViews(!views)}
+                    className="px-6 py-2 rounded-md bg-lgray  dark-btn"
+                  >
+                    {lang !== "English" ? "Compact View" : "कम्प्याक्ट भिउ"}
+                  </button>
+                </Link>
+              )}
             </div>
           </div>
 
@@ -79,6 +94,7 @@ const Navbar = ({ children }) => {
               className="dark-text text-black cursor-pointer"
             />
             <RiNotification2Fill size={25} className=" text-black dark-text" />
+
             <Link
               to="/login"
               className="flex rounded-md justify-center items-center px-5 py-2 space-x-2 text-black bg-lgray"

@@ -47,8 +47,8 @@ const HomePage = () => {
           <h1 className="text-sm text-gray font-semibold">See All</h1>
         </div>
         <div className="flex justify-center items-center space-x-3">
-          <img className="py-5 w-96 " src={Trending} alt="news" />
-          <img className="py-5 w-96 " src={Trending} alt="news" />
+          <img className="py-5 w-1/2 " src={Trending} alt="news" />
+          <img className="py-5 w-1/2 " src={Trending} alt="news" />
         </div>
         <div className="flex justify-around py-5 items-center">
           <a href="http://www.civilbank.com.np/" target="_blank">
@@ -62,7 +62,7 @@ const HomePage = () => {
           <a href="https://www.facebook.com/yeticarpetnepal" target="_blank">
             <img
               alt=""
-              class="animated fadeIn"
+              className="animated fadeIn"
               data-src="https://ratopatis.prixacdn.net/media/Yeti-Carpet-1_1.gif"
               src="https://ratopatis.prixacdn.net/media/Yeti-Carpet-1_1.gif"
             />
@@ -99,7 +99,7 @@ const HomePage = () => {
               <NewsCard
                 title={
                   lang !== "English"
-                    ? "Revampthonorganized by Leapfrog boasts 13 amazing teams"
+                    ? "Revampthon organized by Leapfrog boasts 13 amazing teams"
                     : "Leapfrog द्वारा आयोजित Recampton मा 13 अद्भुत टोलीहरू गर्व गर्दछ"
                 }
               />
@@ -110,7 +110,7 @@ const HomePage = () => {
               <NewsCard
                 title={
                   lang !== "English"
-                    ? "Revampthonorganized by Leapfrog boasts 13 amazing teams"
+                    ? "Revampthon organized by Leapfrog boasts 13 amazing teams"
                     : "Leapfrog द्वारा आयोजित Recampton मा 13 अद्भुत टोलीहरू गर्व गर्दछ"
                 }
               />
@@ -121,7 +121,7 @@ const HomePage = () => {
               <NewsCard
                 title={
                   lang !== "English"
-                    ? "Revampthonorganized by Leapfrog boasts 13 amazing teams"
+                    ? "Revampthon organized by Leapfrog boasts 13 amazing teams"
                     : "Leapfrog द्वारा आयोजित Recampton मा 13 अद्भुत टोलीहरू गर्व गर्दछ"
                 }
               />
@@ -132,7 +132,7 @@ const HomePage = () => {
               <NewsCard
                 title={
                   lang !== "English"
-                    ? "Revampthonorganized by Leapfrog boasts 13 amazing teams"
+                    ? "Revampthon organized by Leapfrog boasts 13 amazing teams"
                     : "Leapfrog द्वारा आयोजित Recampton मा 13 अद्भुत टोलीहरू गर्व गर्दछ"
                 }
               />
@@ -147,8 +147,8 @@ const HomePage = () => {
           <h1 className="text-sm text-gray font-semibold">See All</h1>
         </div>
         <div className="flex justify-center items-center space-x-3">
-          <img className="py-5 w-96 " src={Trending} alt="news" />
-          <img className="py-5 w-96 " src={Trending} alt="news" />
+          <img className="py-5 w-1/2 " src={Trending} alt="news" />
+          <img className="py-5 w-1/2 " src={Trending} alt="news" />
         </div>
       </div>
     </Sidebar>

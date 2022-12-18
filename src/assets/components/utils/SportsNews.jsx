@@ -6,7 +6,7 @@ import { ThemeProvider } from "./Navbar";
 const SportsNews = () => {
   const lang = useContext(ThemeProvider);
   return (
-    <div className="px-8 py-10  w-full  ">
+    <div className="px-8 py-10 bg-lgray dark-btn  ">
       <div className="flex  justify-between items-center ">
         <h1 className="text-lg font-semibold dark-text">
           {" "}

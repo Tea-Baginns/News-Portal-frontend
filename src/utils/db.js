@@ -3,7 +3,7 @@ import RevImage from "../assets/images/NewsThumb.svg";
 const news = [
   {
     id: 0,
-    title_en: "Revampthonorganized by Leapfrog boasts 13 amazing teams",
+    title_en: "Revampthon organized by Leapfrog boasts 13 amazing teams",
     title_np: "Leapfrog द्वारा संगठित Revampthon 13 अद्भुत टोलीहरू घमण्ड गर्दछ",
     content_en:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora quod tempore vitae alias eius porro illo a dignissimos adipisci? Quia impedit eos aperiam corrupti sapiente, voluptatem neque. Maiores sapiente odit dolorum cupiditate, obcaecati perspiciatis ad aliquam corrupti totam molestiae rem, velit deserunt soluta deleniti non tenetur aspernatur dolores beatae, voluptate nesciunt illo nisi sint! Esse repudiandae sint quo rerum officia, modi eveniet. Atque officia quisquam, harum consequatur nesciunt corporis vitae, fugit maxime reprehenderit quae neque ratione perspiciatis, voluptatibus animi quod tempore molestias alias! Sed ipsa maiores, atque necessitatibus ipsum, amet consequatur incidunt culpa molestiae sequi recusandae id eveniet ipsam natus.",
